@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- A: Gaige Johnston, 000869398, 01/02/2022 -->
+        <!-- This is an introductory site to Dungeons and Dragons using Javascript and Bootstrap styling for ASsignment 3 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles/customStyles.css" rel="stylesheet">
+        <title>D&D</title>
+    </head>
+    <body>
+        <header>
+          <!-- header code from Bootstrap example carousel code -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-red">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="https://dnd.wizards.com/" target="_blank">Dungeons & Dragons</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" 
+                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav me-auto mb-2 mb-md-0 ms-md-5">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="https://csunix.mohawkcollege.ca/~sa000869398/private/index.html">Main Index</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="imageSources.html" target="_blank">Image Sources</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+        </header>
+
+        <main>
+          <!-- start of carousel -->
+          <!-- carousel code from Bootstrap example carousel code -->
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="headlineImg img-fluid" src="images/multiverse.jpg" alt="Monsters of the Multiverse">
+                <!-- image from https://dnd.wizards.com/ -->
+                <div class="container">
+                  <div class="carousel-caption text-start">
+                    <h1>Check Out the Newest Expansion Book</h1>
+                    <p>Mordenkainen Presents: Monsters of the Multiverse</p>
+                    <!-- using the small class and trying to make my own for <p> wouldn't make the font smaller here, so image sources for the site will be in the footer on the site -->
+                    <p><a class="btn btn-lg btn-primary" href="https://dnd.wizards.com/products/monsters-of-the-multiverse" target="_blank">More Info</a></p>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="headlineImg img-fluid" src="images/dice.jpg" alt="A Plethora of Colourful Dice">
+                <!-- image from https://www.baltana.com/games/dice-board-game-background-hd-wallpapers-88871.html -->
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Get Some Fun New Dice!</h1>
+                    <p>Plastic, Metal, or Wood - Sparkly, Shiny, or Matte - Colourful or Monchrome - Endless Options!</p>
+                    <p><a class="btn btn-lg btn-primary" href="https://www.etsy.com/market/dnd_5e_dice" target="_blank">Shop on Etsy</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="headlineImg img-fluid" src="images/foundry.jpg" alt="Foundry Banner">
+                <!-- image from https://foundryvtt.com/ -->
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>Foundry Virtual Tabletop</h1>
+                    <p>When you can't game in person, take to the internet with online maps, character sheets, and so much more!</p>
+                    <p><a class="btn btn-lg btn-primary" href="https://foundryvtt.com/" target="_blank">More Info</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> <!-- end of carousel -->
+
+          <div class="container marketing">
+            <!-- these three info blocks from Bootstrap example carousel code -->
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>What is D&D?</h2>
+                <p>Dungeons and Dragons is a Tabletop Roleplaying game. This means that you play the game as a character that you create! Unless you're running the game as a DM.</p>
+              </div><!-- /.col-lg-4 -->
+        
+              <div class="col-lg-4">
+                <h2>What is a 'DM'?</h2>
+                <p>It stands for 'Dungeon Master' - which is a fun title for the person who runs the game! They control the game world and everything in it, except for your created characters.</p>
+              </div><!-- /.col-lg-4 -->
+        
+              <div class="col-lg-4">
+                <h2>Creating Characters?</h2>
+                <p>This can be done by consulting the Players Handbook. There are options for what race and class you can play, below are the first 5 levels of 3 different classes!</p>
+              </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+          </div><!-- /.container marketing -->
+          
+          <!-- Start of accordians -->
+          <!-- using code from https://getbootstrap.com/docs/5.0/components/accordion/ for accordians -->
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordianFlush">
+              <div class="accordion-item">
+
+                <!-- start of accordian item one - barbarian -->
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <img src="images/barbarian.JPG" alt="Barbarian" class="bd-placeholder-img rounded-3 img-spacing" width="140" height="140">
+                    <!-- image from https://www.dndbeyond.com/classes/barbarian -->
+                    Barbarian: &nbsp; Use your strength and sheer rage to destroy foes while withstanding attacks that would fell others. You are the unstoppable object.
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordianFlush">
+                  <div class="accordion-body">
+                    <!-- start of inside accordian one -->
+                    <div class="container">
+                      <div class="row">
+                        <!-- Table start-->
+                        <!-- using code from https://getbootstrap.com/docs/5.0/content/tables/ -->
+                        <div class="table-responsive col-lg-6">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Level</th>
+                                <th scope="col">Proficiency Bonus</th>
+                                <th scope="col">Features</th>
+                                <th scope="col">Rages</th>
+                                <th scope="col">Rage Damage</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row"  >1st</th>
+                                <td>+2</td>
+                                <td>Rage, Unarmored Defense</td>
+                                <td>2</td>
+                                <td>+2</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >2nd</th>
+                                <td>+2</td>
+                                <td>Reckless Attack, Danger Sense</td>
+                                <td>2</td>
+                                <td>+2</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >3rd</th>
+                                <td>+2</td>
+                                <td>Primal Path</td>
+                                <td>3</td>
+                                <td>+2</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >4th</th>
+                                <td>+2</td>
+                                <td>Ability Score Improvement</td>
+                                <td>3</td>
+                                <td>+2</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >5th</th>
+                                <td>+3</td>
+                                <td>Extra Attack, Fast Movement</td>
+                                <td>3</td>
+                                <td>+2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div> <!-- Table ends -->
+
+                        <!-- Form starts-->
+                        <form method="post" action="https://csunix.mohawkcollege.ca/~adams/10259/formInputRepeater.php" class="col-lg-6">
+                          <h3>Create a Barbarian:</h3>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <fieldset class="mb-2">
+                                <label for="barbarian-level">Select starting level </label>
+                                <input type="number" name="Starting-Level" id="barbarian-level" min="1" max="5" value="1">
+                              </fieldset>
+                              <fieldset class="mb-2">
+                                <label>Pick Starting Equipment</label>
+
+                                <label class="d-block">a)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon1" id="greataxe" value="Greataxe" checked>
+                                  <label class="form-check-label" for="greataxe">
+                                    Greataxe
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon1" id="otherWeapon" value="Other-Martial">
+                                  <label class="form-check-label" for="otherWeapon">
+                                    Martial Melee Weapon
+                                  </label>
+                                </div>
+
+                                <label>b)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon2" id="handaxe" value="Handaxes" checked>
+                                  <label class="form-check-label" for="handaxe">
+                                    2 Handaxes
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon2" id="simpleWeapon" value="Simple">
+                                  <label class="form-check-label" for="simpleWeapon">
+                                    1 Simple Weapon
+                                  </label>
+                                </div>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6">
+                              <fieldset class="mb-2">
+                                <label>Select 2 Skills</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="barbarian-skills" value="animal-handling" id="animal-handling">
+                                  <label class="form-check-label" for="animal-handling">
+                                    Animal Handling
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="barbarian-skills" value="athletics" id="athletics">
+                                  <label class="form-check-label" for="athletics">
+                                    Athletics
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="barbarian-skills" value="intimidation" id="intimidation">
+                                  <label class="form-check-label" for="intimidation">
+                                    Intimidation
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="barbarian-skills" value="nature" id="nature">
+                                  <label class="form-check-label" for="nature">
+                                    Nature
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="barbarian-skills" value="perception" id="perception">
+                                  <label class="form-check-label" for="perception">
+                                    Perception
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="barbarian-skills" value="survival" id="survival">
+                                  <label class="form-check-label" for="survival">
+                                    Survival
+                                  </label>
+                                </div>
+                              </fieldset>
+                              <fieldset>
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Reset" id="reset-barbarian">
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form> <!-- end of form -->
+                      </div>
+                    </div>
+                  </div> <!-- end of accordian inside one -->
+                </div>
+              </div> <!-- end of barbarian -->
+
+              <!-- start of accordian item two -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <img src="images/ranger.JPG" alt="Ranger" class="rounded-3 img-spacing" width="140" height="140">
+                    <!-- image from https://www.dndbeyond.com/classes/ranger --> 
+                    Ranger: &nbsp; Pick off the enemy with your bow before they even see you, and use some magic to heal friends or augment your arrows.
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordianFlush">
+                  <div class="accordion-body">
+                    <!-- start of accordian inside two -->
+                    <div class="container">
+                      <div class="row">
+                        <!-- start of table -->
+                        <div class="table-responsive col-lg-6">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Level</th>
+                                <th scope="col">Proficiency Bonus</th>
+                                <th scope="col">Features</th>
+                                <th scope="col">Spells Known</th>
+                                <th scope="col">1st Level Spellslot</th>
+                                <th scope="col">2nd Level Spellslot</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" >1st</th>
+                                <td>+2</td>
+                                <td>Favored Enemy, Natural Explorer</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >2nd</th>
+                                <td>+2</td>
+                                <td>Fighting Style, Spellcasting</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >3rd</th>
+                                <td>+2</td>
+                                <td>Ranger Archetype, Primeval Awareness</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >4th</th>
+                                <td>+2</td>
+                                <td>Ability Score Improvement</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >5th</th>
+                                <td>+3</td>
+                                <td>Extra Attack</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div> <!-- Table ends -->
+
+                        <!-- Form starts-->
+                        <form method="post" action="https://csunix.mohawkcollege.ca/~adams/10259/formInputRepeater.php" class="col-lg-6">
+                          <h3>Create a Ranger:</h3>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <fieldset class="mb-2">
+                                <label for="ranger-level">Select starting level </label>
+                                <input type="number" name="Starting-Level" id="ranger-level" min="1" max="5" value="1">
+                              </fieldset>
+                              <fieldset class="mb-2">
+                                <label>Pick Starting Equipment</label>
+
+                                <label class="d-block">a)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="armor" id="scale" value="scale" checked>
+                                  <label class="form-check-label" for="scale">
+                                    Scale Mail
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="armor" id="leather" value="leather">
+                                  <label class="form-check-label" for="leather">
+                                    Leather Armor
+                                  </label>
+                                </div>
+
+                                <label>b)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon-r" id="shortswords" value="shortswords" checked>
+                                  <label class="form-check-label" for="shortswords">
+                                    2 Shortswords
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon-r" id="simpleWeapon-r" value="simpleWeapon-r">
+                                  <label class="form-check-label" for="simpleWeapon-r">
+                                    2 Simple Melee Weapons
+                                  </label>
+                                </div>
+
+                                <label>c)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="pack" id="dungeoneers" value="dungeoneers" checked>
+                                  <label class="form-check-label" for="dungeoneers">
+                                    Dungeoneer's Pack
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="pack" id="explorers" value="explorers">
+                                  <label class="form-check-label" for="explorers">
+                                    Explorer's Pack
+                                  </label>
+                                </div>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6">
+                              <fieldset class="mb-2">
+                                <label>Select 3 Skills</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="animal-handling-r" id="animal-handling-r">
+                                  <label class="form-check-label" for="animal-handling-r">
+                                    Animal Handling
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="athletics-r" id="athletics-r">
+                                  <label class="form-check-label" for="athletics-r">
+                                    Athletics
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="insight" id="insight">
+                                  <label class="form-check-label" for="insight">
+                                    Insight
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="investigation" id="investigation">
+                                  <label class="form-check-label" for="investigation">
+                                    Investigation
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="nature-r" id="nature-r">
+                                  <label class="form-check-label" for="nature-r">
+                                    Nature
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="perception-r" id="perception-r">
+                                  <label class="form-check-label" for="perception-r">
+                                    Perception
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="stealth" id="stealth">
+                                  <label class="form-check-label" for="stealth">
+                                    Stealth
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ranger-skills" value="survival-r" id="survival-r">
+                                  <label class="form-check-label" for="survival-r">
+                                    Survival
+                                  </label>
+                                </div>
+                              </fieldset>
+                              <fieldset>
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Reset" id="reset-ranger">
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form> <!-- end of form -->
+                      </div>
+                    </div>
+                  </div> <!-- end of accordian inside two -->
+                </div>
+              </div> <!-- end of ranger -->
+
+              <!-- start of accordian item three -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <img src="images/wizard.JPG" alt="Wizard" class="rounded-3 img-spacing" width="140" height="140">
+                    <!-- image from https://www.dndbeyond.com/classes/wizard -->
+                    Wizard: &nbsp; Bring a book to a sword fight to obliterate hordes with explosions of fire, or use magic defensively to protect yourself and allies.
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordianFlush">
+                  <div class="accordion-body">
+                    <!-- start of accordian inside three -->
+                    <div class="container">
+                      <div class="row">
+                        <!-- start of table -->
+                        <div class="table-responsive col-lg-6">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Level</th>
+                                <th scope="col">Proficiency Bonus</th>
+                                <th scope="col">Features</th>
+                                <th scope="col">Cantrips Known</th>
+                                <th scope="col">1st Level Spellslot</th>
+                                <th scope="col">2nd Level Spellslot</th>
+                                <th scope="col">3rd Level Spellslot</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" >1st</th>
+                                <td>+2</td>
+                                <td>Spellcasting, Arcane Recovery</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >2nd</th>
+                                <td>+2</td>
+                                <td>Arcane Tradition</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >3rd</th>
+                                <td>+2</td>
+                                <td>-</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >4th</th>
+                                <td>+2</td>
+                                <td>Ability Score Improvement</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >5th</th>
+                                <td>+3</td>
+                                <td>-</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div> <!-- end of table -->
+                        
+                        <!-- Form starts-->
+                        <form method="post" action="https://csunix.mohawkcollege.ca/~adams/10259/formInputRepeater.php" class="col-lg-6">
+                          <h3>Create a Wizard:</h3>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <fieldset class="mb-2">
+                                <label for="wizard-level">Select starting level </label>
+                                <input type="number" name="Starting-Level" id="wizard-level" min="1" max="5" value="1">
+                              </fieldset>
+                              <fieldset class="mb-2">
+                                <label>Pick Starting Equipment</label>
+
+                                <label class="d-block">a)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon" id="quarterstaff" value="quarterstaff" checked>
+                                  <label class="form-check-label" for="quarterstaff">
+                                    Quarterstaff
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="weapon" id="dagger" value="dagger">
+                                  <label class="form-check-label" for="dagger">
+                                    Dagger
+                                  </label>
+                                </div>
+
+                                <label>b)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="casting" id="pouch" value="pouch" checked>
+                                  <label class="form-check-label" for="pouch">
+                                    Component Pouch
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="casting" id="focus" value="focus">
+                                  <label class="form-check-label" for="focus">
+                                    Arcane Focus
+                                  </label>
+                                </div>
+
+                                <label>c)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="pack" id="scholars" value="scholars" checked>
+                                  <label class="form-check-label" for="scholars">
+                                    Scholar's Pack
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="pack" id="explorers-w" value="explorers-w">
+                                  <label class="form-check-label" for="explorers-w">
+                                    Explorer's Pack
+                                  </label>
+                                </div>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6">
+                              <fieldset class="mb-2">
+                                <label>Select 2 Skills</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="wizard-skills" value="arcana" id="arcana">
+                                  <label class="form-check-label" for="arcana">
+                                    Arcana
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="wizard-skills" value="history" id="history">
+                                  <label class="form-check-label" for="history">
+                                    History
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="wizard-skills" value="insight-w" id="insight-w">
+                                  <label class="form-check-label" for="insight-w">
+                                    Insight
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="wizard-skills" value="investigation-w" id="investigation-w">
+                                  <label class="form-check-label" for="investigation-w">
+                                    Investigation
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="wizard-skills" value="medicine" id="medicine">
+                                  <label class="form-check-label" for="medicine">
+                                    Medicine
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="wizard-skills" value="religion" id="religion">
+                                  <label class="form-check-label" for="religion">
+                                    Religion
+                                  </label>
+                                </div>
+                              </fieldset>
+                              <fieldset>
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Reset" id="reset-wizard">
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form> <!-- end of form -->
+                      </div>
+                    </div> <!-- end of inside accordian three -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end of accordians -->
+
+          <!-- FOOTER -->
+          <footer class="container text-center mt-3">
+            <p><a href="#">Back to top</a></p>
+            <p>&copy; 2022 &middot; Gaige Johnston &middot; Mohawk College</p>
+          </footer>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Lets me limit amount of boxes that can be checked for the skill selection in the accordians -->
+        <script src="styles/checkbuttons.js"></script>
+    </body>
+</html>
